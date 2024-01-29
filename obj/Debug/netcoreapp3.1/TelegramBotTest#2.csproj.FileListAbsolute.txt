@@ -56,3 +56,6 @@ C:\Users\Nurik\Desktop\TelegramBotTest#2\obj\Debug\netcoreapp3.1\TelegramBotTest
 C:\Users\Nurik\Desktop\TelegramBotTest#2\obj\Debug\netcoreapp3.1\TelegramBotTest#2.dll
 C:\Users\Nurik\Desktop\TelegramBotTest#2\obj\Debug\netcoreapp3.1\TelegramBotTest#2.pdb
 C:\Users\Nurik\Desktop\TelegramBotTest#2\obj\Debug\netcoreapp3.1\TelegramBotTest#2.genruntimeconfig.cache
+C:\Users\Nurik\Desktop\TelegramBotTest#2\obj\Debug\netcoreapp3.1\TelegramBotTest#2.sourcelink.json
+C:\Users\Nurik\Desktop\TelegramBotTest#2\bin\Debug\netcoreapp3.1\CloudConvert.API.dll
+C:\Users\Nurik\Desktop\TelegramBotTest#2\bin\Debug\netcoreapp3.1\JetBrains.Annotations.dll

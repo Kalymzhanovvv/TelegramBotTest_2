@@ -1,16 +1,20 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
+using System.IO;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Telegram.Bot;
 using Telegram.Bot.Types;
 using TelegramBotTest_2.Data;
+using TelegramBotTest_2.Game;
 
 namespace TelegramBotTest_2.Bot
 {
     public class HandleUpdate
     {
         ApplicationContext db = new ApplicationContext();
+        Moves moves = new Moves();
 
         public async Task Update(ITelegramBotClient client, Update update, CancellationToken token)
         {
@@ -22,27 +26,16 @@ namespace TelegramBotTest_2.Bot
                     $"UserName - {message.Chat.FirstName} | Text - {message.Text}"
                     );
 
-                if (message.Text.ToLower().Contains("/start"))
+                if (message.Text == "/игра")
                 {
-                    await client.SendTextMessageAsync(message.Chat.Id, "Ассаляму алейкум уа рахматулла!");
-                    return;
-                }
-                else if
-                (
-                    message.Text.ToLower().Contains("ассаляму алейкум") ||
-                    message.Text.ToLower().Contains("ассалаумағалейкүм")
-
-                )
-                {
-                    await client.SendTextMessageAsync(message.Chat.Id, "Уа алейкум ассалям уа рахматулла!");
-                    return;
-                }
-                else
-                {
-                    await client.SendTextMessageAsync(message.Chat.Id, "Такого варианта ответа нет.");
-                    return;
+                    await client.SendTextMessageAsync(
+                        message.Chat.Id,
+                        "Добро пожаловать в игру!"
+                        );
                 }
             }
+
+
             await AddToDb(message.Chat.Id);
         }
 
